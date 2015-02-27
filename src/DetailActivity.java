@@ -1,4 +1,4 @@
-package com.psu.projectii;
+package com.psu.project_pvis;
 
 import java.util.ArrayList;
 
@@ -7,6 +7,9 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.psu.helper.Config;
+import com.psu.helper.HttpHelper;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,11 +22,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.psu.helper.Config;
-import com.psu.helper.HttpHelper;
-
 public class DetailActivity extends Activity {
-	
+
 	private ImageButton ibBack;
 	private TextView tvActivityName, tvFac, tvContact;
 	private TextView tvTel, tvObjective, tvDetail;
@@ -32,7 +32,7 @@ public class DetailActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.detail_activity);
+		setContentView(R.layout.activity_detail);
 		
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
@@ -42,9 +42,9 @@ public class DetailActivity extends Activity {
 			tvActivityName = (TextView) findViewById(R.id.tv_Name);
 			tvFac = (TextView) findViewById(R.id.tv_Fac);
 			tvContact = (TextView) findViewById(R.id.tv_Contact);
-			tvTel = (TextView) findViewById(R.id.tv_Tel);
+			//tvTel = (TextView) findViewById(R.id.tv_Tel);
 			tvObjective = (TextView) findViewById(R.id.tv_Object);
-			tvDetail = (TextView) findViewById(R.id.tv_Detail);
+			//tvDetail = (TextView) findViewById(R.id.tv_Detail);
 
 			Log.i("TEST","1");
 			
@@ -58,8 +58,9 @@ public class DetailActivity extends Activity {
 
 			//data.add(new BasicNameValuePair("ActivityID", activityID.getString("ActivityID")));
 
-			String result = HttpHelper.GetString(String.format("http://%s/172.19.133.208/Rest/index.php?rnd=%s&r=%s", 
-					Config.Ip,Math.random()), data);
+			String result = HttpHelper.GetString(String.format("http://%s/Rest/index.php", Config.Ip), null);
+			/*String result = HttpHelper.GetString(String.format("http://%s/Rest/index.php?rnd=%s&r=%s", 
+					Config.Ip,Math.random()), data);*/
 
 			Log.i("RESULT", result);
 			
@@ -71,15 +72,11 @@ public class DetailActivity extends Activity {
 
 					tvActivityName.setText(jsObj.getString("ActivityName"));
 
-					//tvFac.setText(jsObj.getString("DetailActivity"));
+					tvFac.setText(jsObj.getString("DetailActivity"));
 					
-					//tvContact.setText(jsObj.getString("TITLE"));
-
-					//tvTel.setText(jsObj.getString("PAGES"));
+					tvContact.setText(jsObj.getString("Solution"));
 
 					tvObjective.setText(jsObj.getString("Objective"));
-
-					tvDetail.setText(jsObj.getString("DetailActivity"));
 
 				}
 				ibBack.setOnClickListener(new OnClickListener() {
@@ -92,5 +89,6 @@ public class DetailActivity extends Activity {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		
 	}
 }
