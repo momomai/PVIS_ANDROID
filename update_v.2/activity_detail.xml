@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
-            
+
             <ImageButton
                 android:id="@+id/ibBack"
                 android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="คณะ :"
+                    android:text="รายละเอียดโครงการ :"
                     android:textColor="#CD0000"
                     android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="FACULTY"
+                    android:text="DETAILACTIVITY"
                     android:textColor="#000000" />
             </LinearLayout>
 
@@ -123,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="ชื่อผู้ติดต่อ :"
+                    android:text="สาเหตุของปัญหา :"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -132,11 +132,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="CONTACT"
+                    android:text="SOLUTIONS"
                     android:textColor="#000000" />
             </LinearLayout>
 
-            <LinearLayout
+            <!-- <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -156,7 +156,7 @@
                     android:layout_margin="5dp"
                     android:text="PHONE"
                     android:textColor="#000000" />
-            </LinearLayout>
+            </LinearLayout> -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -180,7 +180,7 @@
                     android:textColor="#000000" />
             </LinearLayout>
 
-            <View
+            <!-- <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#666666" />
@@ -210,7 +210,7 @@
                     android:layout_margin="5dp"
                     android:text="DETAIL"
                     android:textColor="#000000" />
-            </LinearLayout>
+            </LinearLayout> -->
 
             <View
                 android:layout_width="match_parent"

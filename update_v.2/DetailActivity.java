@@ -1,4 +1,4 @@
-package com.psu.projectii;
+package com.psu.project_pvis;
 
 import java.util.ArrayList;
 
@@ -7,6 +7,9 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.psu.helper.Config;
+import com.psu.helper.HttpHelper;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -19,11 +22,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.psu.helper.Config;
-import com.psu.helper.HttpHelper;
-
 public class DetailActivity extends Activity {
-	
+
 	private ImageButton ibBack;
 	private TextView tvActivityName, tvFac, tvContact;
 	private TextView tvTel, tvObjective, tvDetail;
@@ -32,7 +32,7 @@ public class DetailActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.detail_activity);
+		setContentView(R.layout.activity_detail);
 		
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
@@ -58,8 +58,9 @@ public class DetailActivity extends Activity {
 
 			//data.add(new BasicNameValuePair("ActivityID", activityID.getString("ActivityID")));
 
-			String result = HttpHelper.GetString(String.format("http://%s/192.168.208.220/Rest/index.php?rnd=%s&r=%s", 
-					Config.Ip,Math.random()), data);
+			String result = HttpHelper.GetString(String.format("http://%s/Rest/index.php", Config.Ip), null);
+			/*String result = HttpHelper.GetString(String.format("http://%s/Rest/index.php?rnd=%s&r=%s", 
+					Config.Ip,Math.random()), data);*/
 
 			Log.i("RESULT", result);
 			
@@ -75,11 +76,7 @@ public class DetailActivity extends Activity {
 					
 					tvContact.setText(jsObj.getString("Solution"));
 
-					//tvTel.setText(jsObj.getString("PAGES"));
-
 					tvObjective.setText(jsObj.getString("Objective"));
-
-					//tvDetail.setText(jsObj.getString("DetailActivity"));
 
 				}
 				ibBack.setOnClickListener(new OnClickListener() {
@@ -92,5 +89,6 @@ public class DetailActivity extends Activity {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		
 	}
 }
