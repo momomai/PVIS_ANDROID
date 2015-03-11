@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tvActName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/app_name"
+            android:textColor="#CD0000"
+            android:textStyle="bold" />
+
+         <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#999999" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/app_name"
+            android:textColor="#4682B4" />
+        
+         <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#999999" />
+
+        <TextView
+            android:id="@+id/tvDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/app_name"
+            android:textColor="#4682B4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#999999" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/btnDetail2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvPrint"
+                android:layout_alignBottom="@+id/tvPrint"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/tvPrint"
+                android:background="@drawable/bg_btn"
+                android:paddingBottom="5dp"
+                
+                android:paddingTop="5dp"
+                android:text="Detail"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_btn"
+                android:paddingBottom="5dp"
+                
+                android:paddingTop="5dp"
+                android:text="View"
+                android:textColor="#FFFFFF" />
+        </LinearLayout> 
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#666666" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_tab"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+    </LinearLayout>
+
+</LinearLayout>
