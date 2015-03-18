@@ -8,120 +8,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F5F5F5"
-        android:orientation="vertical"
-        android:padding="10dp" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/tvProjectName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:text="ProjectName" />
-
-            <TextView
-                android:id="@+id/tvRequetList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="RequestName" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#666666" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999" />
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/tvDateStar_Stop"
+            android:id="@+id/tvLocName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Date" />
+            android:padding="10dp"
+            android:text="LOCATIONNAME" />
 
         <TextView
-            android:id="@+id/tvLocationAddress"
+            android:id="@+id/tvProject_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-			android:layout_margin="10dp"
-            android:text="LocationAddress" />
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp" >
-            
-            <TextView
-            	android:id="@+id/tvTel"
-            	android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:layout_margin="10dp"
-            	android:layout_marginRight="10dp"
-            	android:text="Tel" />
-            
-            <TextView
-            	android:id="@+id/tvFax"
-            	android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:layout_margin="10dp"
-            	android:layout_marginLeft="60dp"
-            	android:text="Fax" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#666666" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#999999" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp" >
-
-            <TextView
-                android:id="@+id/tvDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:background="@drawable/bg_btn"
-                android:paddingBottom="5dp"
-                android:paddingLeft="@dimen/app_margin_left"
-                android:paddingRight="@dimen/app_margin_right"
-                android:paddingTop="5dp"
-                android:text="Detail"
-                android:textColor="#FFFFFF" />
-
-            <!-- <TextView
-                android:id="@+id/tvPrint"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/app_margin_left"
-                android:background="@drawable/bg_btn"
-                android:paddingBottom="5dp"
-                android:paddingLeft="@dimen/app_margin_left"
-                android:paddingRight="@dimen/app_margin_right"
-                android:paddingTop="5dp"
-                android:text="@string/btn_print"
-                android:textColor="#FFFFFF" />
-        </LinearLayout> -->        
+            android:padding="10dp"
+            android:text="PROJECTNAME" />
     </LinearLayout>
 
     <View
@@ -133,6 +35,52 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#999999" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvrequest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="REQUESTNAME" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tvDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="รายละเอียด"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_btn"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="แผนที่"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
