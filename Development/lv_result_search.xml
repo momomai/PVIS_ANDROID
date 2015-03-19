@@ -19,11 +19,11 @@
             android:text="LOCATIONNAME" />
 
         <TextView
-            android:id="@+id/tvProject_name"
+            android:id="@+id/tv_Locationaddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="PROJECTNAME" />
+            android:text="LOCATIONADDRESS" />
     </LinearLayout>
 
     <View
@@ -39,22 +39,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+		android:padding="10dp"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/tvrequest_name"
+            android:id="@+id/tv_Helpingname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="REQUESTNAME" />
+            android:text="HELPINGNAME" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp" >
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
 
         <TextView
             android:id="@+id/tvDetail"
@@ -72,7 +74,7 @@
             android:id="@+id/tvMap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:background="@drawable/bg_btn"
             android:paddingBottom="5dp"
             android:paddingLeft="10dp"
